@@ -2,10 +2,12 @@ import React from "react";
 import HomeImage from "./images/amazonhome.jpg";
 import "./styles/Home.css";
 import Product from "./Product";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <div className="home">
+      <Header />
       <div>
         <img className="home__image" src={HomeImage} alt="home" />
         <div className="home__row">
