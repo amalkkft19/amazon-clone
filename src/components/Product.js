@@ -36,6 +36,7 @@ const Product = ({ id, title, image, price, rating }) => {
             ))}
         </div>
       </div>
+
       <img alt="amazon lap" src={image} />
       <button onClick={addToBasket}>Add to basket</button>
     </div>
