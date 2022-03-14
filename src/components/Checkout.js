@@ -6,14 +6,16 @@ import CheckOutProducts from "./CheckOutProducts";
 import Header from "./Header";
 
 const Checkout = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  console.log(user);
   return (
     <div>
       <Header />
       <div className="checkout">
         <div className="checkout__left">
-          <div className="checkout__title">
-            <h2>Shopping Cart</h2>
+          <div>
+            <h3>Hello,{user?.email}</h3>
+            <h2 className="checkout__title">Shopping Cart</h2>
             {basket.map((item) => (
               <CheckOutProducts
                 id={item.id}
